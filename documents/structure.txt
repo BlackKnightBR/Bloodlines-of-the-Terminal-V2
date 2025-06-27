@@ -1,0 +1,22 @@
+Nome do projeto
+Bloodlines of the Terminal
+
+Classes principais e suas responsabilidades
+  Super Classes
+    Classes Humanos
+  Personagens
+    Classes  guerreiros, magos
+
+
+Hierarquia e reutilização
+
+  Guerreiros e Magos herdam de humanos
+  Onde os módulos/mixins entram? Não sei
+
+Interações esperadas no terminal
+  O jogador escolhera opções que seram determinadas pelas interações anteriores com o 
+    jogo e que deteminaram as próximas.
+  (O que o jogador verá, escolherá, e como as batalhas devem fluir.)
+
+Conceitos Ruby que deseja aplicar
+(Proc, lambda, blocos, keyword args, módulos, etc.)
