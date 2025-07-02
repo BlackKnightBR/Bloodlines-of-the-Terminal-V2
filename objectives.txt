@@ -1,5 +1,5 @@
 🔱 Etapas da Nova Jornada
-I. Refatoração e Arquitetura Modular
+(Feito) I. Refatoração e Arquitetura Modular
  Separar lógicas complexas em arquivos ou módulos (ex: combat.rb, dungeon.rb, player_creator.rb).
 
  Criar uma GameState ou Session para guardar informações globais (jogador, inventário, sala atual).
