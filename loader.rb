@@ -5,3 +5,4 @@ require_relative './characters/character'
 Dir["./characters/**/*.rb"].each { |f| require_relative f }
 Dir["./items/**/*.rb"].each { |f| require_relative f }
 Dir["./inventory/**/*.rb"].each { |f| require_relative f }
+Dir["./services/**/*.rb"].each { |f| require_relative f }
