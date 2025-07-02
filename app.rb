@@ -19,46 +19,6 @@ class Game
     main_loop
   end
 
-  def intro
-    puts 'Welcome to Bloodlines of the Terminal...'
-    puts 'Prepare yourself, for blood shall be spilled!'
-  end
-
-  def choose_character
-    puts 'What is your name peasant?'
-    print '> '
-    name = gets.chomp.strip
-    name = 'Douche' if name.empty?
-
-    puts 'Player! Choose your destiny!'
-    puts '1. Warrior'
-    puts '2. Mage'
-    print '> '
-    char = gets.chomp
-
-    case char
-    when '1'
-      @player = Warrior.new(name: name)
-    when '2'
-      @player = Mage.new(name: name)
-    else
-      puts 'Fool! You think you can trick the trickster?!'
-      puts 'A nameless husk you shall be!'
-      @player = Character.new(name: 'Nameless Husk')
-    end
-  end  
-
-  def prologue
-    puts <<~TEXT
-      You awaken in shadows, your mind fogged with fractured memories 
-      of a brutal capture by a savage band of Goblins.
-      
-      The darkness of the cramped cell wraps around you, but the door stands ajar—
-      creaking like a sinister invitation into the unknown...
-
-      You rise... something inside you hungers for revenge.
-    TEXT
-  end
 
   def dungeon_run(player, inventory)
     enemies = [
