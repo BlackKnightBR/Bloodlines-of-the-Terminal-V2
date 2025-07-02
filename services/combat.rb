@@ -5,6 +5,14 @@ class Combat
     @inventory = inventory
   end
 
+  def menu_show 
+    puts '1) Attack'
+    puts '2) Pass'
+    puts '3) Use unique class move!'
+    puts '4) Check Status'
+    puts '5) Inventory'
+  end
+
   def run 
     puts "#{@enemy.name} emerges from the shadows!"
     puts "The battle between #{@player.name} and #{@enemy.name} begins..."
