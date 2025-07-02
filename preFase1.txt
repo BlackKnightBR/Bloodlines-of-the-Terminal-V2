@@ -1,0 +1,35 @@
+❗ Conteúdos que você pode revisar ou aprender antes da Etapa I - Refatoração Modular
+🔸 1. Scopes e Namespaces
+Módulos como "caixas" para classes e funções
+
+module Dungeon; class Room; end; end → como usar Dungeon::Room
+
+Evitar colisão de nomes
+
+🔸 2. Boas Práticas de Arquitetura Ruby
+O que é “coerência de classe” (uma classe = uma responsabilidade)
+
+Arquitetura de serviço (service objects)
+
+D.R.Y. (Don't Repeat Yourself)
+
+Game, Dungeon, Combat, Loot podem ser classes separadas
+
+🔸 3. Uso básico de Struct ou OpenStruct
+Para criar objetos simples de forma leve
+
+Ex: Struct.new(:name, :hp, :loot) como retorno da dungeon
+
+🔸 4. Padrões simples de Projeto (opcional)
+Service Object: mover lógica como combat para sua própria classe
+
+State Pattern: para controlar o progresso do jogo (futuramente)
+
+Strategy Pattern: comportamento diferente para inimigos, ou AI futura
+
+🔸 5. YAML e Persistência
+Já começou muito bem com YAML!
+
+Aprender a carregar, salvar e converter dados corretamente
+
+Permitted classes em safe_load

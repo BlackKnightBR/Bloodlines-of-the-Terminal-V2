@@ -1,0 +1,52 @@
+🔱 Etapas da Nova Jornada
+I. Refatoração e Arquitetura Modular
+ Separar lógicas complexas em arquivos ou módulos (ex: combat.rb, dungeon.rb, player_creator.rb).
+
+ Criar uma GameState ou Session para guardar informações globais (jogador, inventário, sala atual).
+
+ Usar Design Patterns simples (Service Objects, State, Strategy).
+
+II. Dungeon Dinâmica e Sistema de Eventos
+ Reaproveitar o generate_dungeon para criar masmorras diferentes a cada jogo.
+
+ Adicionar eventos aleatórios em salas:
+
+Armadilhas
+
+Cofres
+
+Eventos de diálogo
+
+Checkpoints
+
+ Sistema de mapa básico (array + visualização)
+
+III. Expansão de Conteúdo
+ Novos inimigos com habilidades únicas
+
+ Subclasses e especializações
+
+ Sistema de experiência e níveis mais profundo
+
+ Itens raros, amaldiçoados e lendários (com efeitos)
+
+IV. Salvar e Carregar Partidas
+ Sistema de salvamento com YAML
+
+ Carregamento no início do jogo com opção para novo jogo ou continuar
+
+V. Qualidade de Código e Dev Tools
+ Escrever testes básicos com RSpec (se desejar iniciar)
+
+ Melhorar mensagens de erro
+
+ Refatorar nome de variáveis, mensagens e modularidade
+
+ Gerar documentação automática com Yard?
+
+VI. Polimento e Interface
+ Adicionar animações simples (usando sleep, puts)
+
+ Simular uma HUD com status permanente
+
+ Melhorar a experiência com menus mais limpos e ASCII art
