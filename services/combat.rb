@@ -77,7 +77,7 @@ class Combat
       sleep(0.5)
     end
 
-    puts @player.alive? ? "#{@player.name} stands victorious amidst the bloodied ruins." : "#{player.name} falls to darkness..."
+    puts @player.alive? ? "#{@player.name} stands victorious amidst the bloodied ruins." : "#{@player.name} falls to darkness..."
     sleep(1)
   end
 end

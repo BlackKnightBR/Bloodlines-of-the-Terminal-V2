@@ -8,4 +8,9 @@ def prologue
 
       You rise... something inside you hungers for revenge.
     TEXT
+
+    puts "-" * 40
+    puts 'Loading Game...'
+    puts "-" * 40
+    sleep(2)
 end
