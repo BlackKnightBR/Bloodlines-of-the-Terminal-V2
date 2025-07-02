@@ -4,6 +4,7 @@ class Game
   def initialize
     @player = nil 
     @enemy = nil
+    @dungeon = nil
     @inventory = Inventory.new
     @healingPotion = Potion.new('Healing Potion', 30)
   end
@@ -12,12 +13,12 @@ class Game
     intro 
     choose_character
     prologue
+    choose_dungeon
     main_loop
   end
 
   def main_loop
-    dungeon = Dungeon1.new(player: @player, inventory: @inventory)
-    dungeon.run
+    @dungeon.run
   end
 end
 
