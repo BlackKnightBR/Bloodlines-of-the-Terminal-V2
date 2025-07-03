@@ -1,7 +1,7 @@
 class Mage < Character
   attr_accessor :intelligence, :charm
-  def initialize(name: 'Avalonia', hp: 100, attack: 10, defense: 15, type: 'mage')
-    super(name: name, hp: hp, attack: attack, defense: defense, type: type)
+  def initialize(name: 'Avalonia', hp: 100, attack: 10, defense: 15, type: 'mage', level: 1, xp_given: 100)
+    super(name: name, hp: hp, attack: attack, defense: defense, type: type, level: level, xp_given: xp_given)
     @intelligence = 15
     @charm = 0
 
@@ -20,6 +20,11 @@ class Mage < Character
     end
   
     apply_damage(target, base)
+  end
+
+  def gain_xp(amount)
+    super(amount)
+    @intelligence += 5 if @level > 1
   end
 
   def skill_move(target)

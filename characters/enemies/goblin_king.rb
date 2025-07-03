@@ -1,7 +1,7 @@
 class Goblin_King < Character
   attr_accessor  :haste
-  def initialize(name: 'The Goblin King', hp: 600, attack: 50, defense: 30)
-    super(name: name, hp: hp, attack: attack, defense: defense)
+  def initialize(name: 'The Goblin King', hp: 600, attack: 40, defense: 30, level: 30, xp_given: 1000)
+    super(name: name, hp: hp, attack: attack, defense: defense, level: level, xp_given: xp_given)
     @haste = 0
   end
 
@@ -20,21 +20,21 @@ class Goblin_King < Character
     elsif @haste >= 280
       puts "#{@name} foams at the mouth, his veins bulging as dark energy gathers around his blade!"
       base = @attack + 25
-      @haste += 10
+      @haste += 15
 
     elsif @haste >= 220
       puts "#{@name} growls in an unknown tongue, calling upon ancestral rage!"
       base = @attack + 20
-      @haste += 10
+      @haste += 20
 
     elsif @haste >= 110
       puts "#{@name} begins to chant and grip his axe tighter... something wicked brews!"
       base = @attack + 10
-      @haste += 10
+      @haste += 25
 
     else
       base = @attack + 5
-      @haste += 10
+      @haste += 30
     end
   
     apply_damage(target, base)

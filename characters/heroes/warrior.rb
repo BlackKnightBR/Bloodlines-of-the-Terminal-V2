@@ -1,8 +1,8 @@
 class Warrior < Character
   attr_accessor :strength, :rage
 
-  def initialize(name: 'Conan', hp: 150, attack: 15, defense: 10, type: 'warrior')
-    super(name: name, hp: hp, attack: attack, defense: defense, type: type)
+  def initialize(name: 'Conan', hp: 150, attack: 15, defense: 10, type: 'warrior', level: 1, xp_given: 100)
+    super(name: name, hp: hp, attack: attack, defense: defense, type: type, level: level, xp_given: xp_given)
     @strength = 10
     @rage = 0
   end
@@ -20,6 +20,11 @@ class Warrior < Character
     end
   
     apply_damage(target, base)
+  end
+
+  def gain_xp(amount)
+    super(amount)
+    @strength += 5 if @level > 1
   end
 
   def skill_move(target)

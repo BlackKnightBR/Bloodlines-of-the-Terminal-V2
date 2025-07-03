@@ -77,7 +77,16 @@ class Combat
       sleep(0.5)
     end
 
-    puts @player.alive? ? "#{@player.name} stands victorious amidst the bloodied ruins." : "#{@player.name} falls to darkness..."
+    puts @player.alive? ? increase_xp : "#{@player.name} falls to darkness..."
     sleep(1)
+  end
+
+  def increase_xp 
+    puts "\n💀 #{@enemy.name} is slain!"
+    sleep(0.3)
+    puts "🩸 #{@player.name} stands victorious amidst the bloodied ruins."
+    sleep(0.3)
+    puts "📈 XP gained: #{@enemy.xp_given}"
+    @player.gain_xp(@enemy.xp_given)
   end
 end

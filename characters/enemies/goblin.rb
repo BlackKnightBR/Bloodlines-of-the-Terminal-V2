@@ -1,7 +1,7 @@
 class Goblin < Character
   attr_accessor  :haste
-  def initialize(name: 'Goblin', hp: 100, attack: 16, defense: 12)
-    super(name: name, hp: hp, attack: attack, defense: defense)
+  def initialize(name: 'Goblin', hp: 100, attack: 16, defense: 12, level: 5, xp_given: 100)
+    super(name: name, hp: hp, attack: attack, defense: defense, level: level, xp_given: xp_given)
     @haste = 0
   end
 

@@ -1,7 +1,7 @@
 class Rat < Character
   attr_accessor  :rage
-  def initialize(name: 'Rat', hp: 80, attack: 8, defense: 5)
-    super(name: name, hp: hp, attack: attack, defense: defense)
+  def initialize(name: 'Rat', hp: 80, attack: 8, defense: 5, level: 2, xp_given: 50)
+    super(name: name, hp: hp, attack: attack, defense: defense, level: level, xp_given: xp_given)
     @rage = 0
   end
 
