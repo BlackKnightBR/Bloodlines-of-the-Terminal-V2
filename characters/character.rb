@@ -24,8 +24,16 @@ class Character
       @hp += 10
       @attack += 2
       @defense += 1
+      puts "-" * 40
       puts "Your stats have increased!"
       puts "#{@name} leveled up! Now level #{@level}!"
+      puts "#{@name}'s Status:"
+      puts "HP: #{@hp}"
+      puts "Attack: #{@attack}"
+      puts "Defense: #{@defense}"
+      puts "XP: #{@xp}/#{xp_needed}"
+      puts "Level: #{@level}"
+      puts "-" * 40
     end
   end
 
