@@ -22,6 +22,8 @@ class Dungeon1 < Dungeon
         @inventory.add(Weapon.new('Rusty Blade', 15), 1, :player)
         @inventory.add(Shield.new('Broquel', 10, 10), 1, :player)
         @inventory.add(Armor.new('Chain Mail', 10), 1, :player)
+        @inventory.add(Booze.new('Whisky', 20), 1, :enemy)
+        @inventory.add(Acid.new('Small Acid Vial', 20), 1, :enemy)
       elsif @player.type == 'mage'
         @inventory.add(Staff.new('Worn Staff', 15), 1, :player)
         @inventory.add(Shield.new('Broquel', 10, 10), 1, :player)

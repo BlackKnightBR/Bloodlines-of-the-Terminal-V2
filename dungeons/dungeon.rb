@@ -5,6 +5,7 @@ class Dungeon
     @player = player
     @inventory = inventory
     @rooms = generate_rooms
+    @small_vial = Potion.new('Small Vial', 15)
   end
 
   def generate_rooms
@@ -28,7 +29,7 @@ class Dungeon
   def run
     current_room_id = '1A'
 
-    while current_room_id != 'END'
+    while current_room_id != 'END' && @player.alive?
       room = @rooms.find { |r| r[:id] == current_room_id }
       break unless room
 
@@ -59,6 +60,6 @@ class Dungeon
   def give_loot(room)
     # Custom logic in subclass if needed
     puts "You find something in the dark..."
-    @inventory.add(Potion.new("Dungeon Loot", 15), 1, :player)
+    @inventory.add(@small_vial, 1, :player)
   end
 end

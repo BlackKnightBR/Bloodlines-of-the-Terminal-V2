@@ -24,7 +24,10 @@ class Warrior < Character
 
   def gain_xp(amount)
     super(amount)
-    @strength += 5 if @level > 1
+    if @level > 1
+      @strength += 5
+    end
+    nil
   end
 
   def skill_move(target)

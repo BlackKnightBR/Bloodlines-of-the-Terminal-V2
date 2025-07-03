@@ -24,7 +24,10 @@ class Mage < Character
 
   def gain_xp(amount)
     super(amount)
-    @intelligence += 5 if @level > 1
+    if @level > 1
+      @intelligence += 5
+    end
+    nil
   end
 
   def skill_move(target)
