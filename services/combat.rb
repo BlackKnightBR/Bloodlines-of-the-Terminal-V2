@@ -13,8 +13,9 @@ class Combat
     puts '5) Inventory'
   end
 
-  def run 
-    puts "#{@enemy.name} emerges from the shadows!"
+  def run
+    puts "-" * 30
+    puts "You feel the air grow heavy... #{@enemy.name}, Level #{@enemy.level}, watches from the shadows."
     puts "The battle between #{@player.name} and #{@enemy.name} begins..."
 
     while @player.alive? && @enemy.alive?

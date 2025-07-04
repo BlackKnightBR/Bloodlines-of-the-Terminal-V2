@@ -13,17 +13,7 @@ class Dungeon
   end
 
   def spawn_enemy(enemy_id)
-    # Strings para classes reais
-    case enemy_id
-    when 'Goblin'
-      Goblin.new
-    when 'Rat'
-      Rat.new
-    when 'Goblin King'
-      Goblin_King.new
-    else
-      raise "Unknown enemy: #{enemy_id}"
-    end
+    EnemyFactory.spawn_enemy(enemy_id)
   end
 
   def run

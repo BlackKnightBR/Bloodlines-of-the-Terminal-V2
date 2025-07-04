@@ -55,4 +55,25 @@ class Staff < Equipable
   end
 end
 
+class Scroll < Equipable
+  def initialize(name, value)
+    super(name, value)
+  end
+
+  def use (player)
+    player.intelligence += @value
+    puts "#{player.name} unfurls the #{@name}, and arcane whispers fill their mind! Intelligence +#{@value}!"
+  end
+end
+
+class Gauntlet < Equipable
+  def initialize (name, value)
+    super(name, value)
+  end
+
+  def use (player)
+    player.strength += @value
+    puts "#{player.name} straps on the #{@name} — ancient runes blaze! Strength +#{@value}!"
+  end
+end
 

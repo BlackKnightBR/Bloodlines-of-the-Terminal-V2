@@ -1,4 +1,4 @@
-class Goblin_King < Character
+class GoblinKing < Character
   attr_accessor  :haste
   def initialize(name: 'The Goblin King', hp: 600, attack: 40, defense: 30, level: 30, xp_given: 1000)
     super(name: name, hp: hp, attack: attack, defense: defense, level: level, xp_given: xp_given)
