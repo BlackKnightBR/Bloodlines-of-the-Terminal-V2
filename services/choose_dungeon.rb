@@ -5,13 +5,15 @@ def choose_dungeon
   print '> '
   choice = gets.chomp.strip
 
-  @dungeon = case choice
-             when '1'
-               Dungeon1.new(player: @player, inventory: @inventory)
-             when '2'
-               Dungeon2.new(player: @player, inventory: @inventory)
-             else
-               puts 'Fool! You think you can trick the trickster?!'
-               DungeonFinal.new(player: @player, inventory: @inventory)
-             end
+  case choice
+  when '1'
+    @dungeon = Dungeon1.new(player: @player, inventory: @inventory, save: @save)
+  when '2'
+    @dungeon = Dungeon2.new(player: @player, inventory: @inventory, save: @save)
+  else
+    puts 'Fool! You think you can trick the trickster?!'
+    sleep(0.5)
+    puts 'A cursed path unfolds...'
+    @dungeon = DungeonFinal.new(player: @player, inventory: @inventory, save: @save)
+  end
 end

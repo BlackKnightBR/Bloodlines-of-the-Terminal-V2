@@ -1,6 +1,6 @@
 class Dungeon1 < Dungeon
-  def initialize(player:, inventory:)
-    super(player: player, inventory: inventory)
+  def initialize(player:, inventory:, save:)
+    super(player: player, inventory: inventory, save: save)
     @acid = Acid.new('Small Acid Vial', 15)
     @whisky = Booze.new('Whisky', 15)
     @knife = Knife.new('Rusty Knife', 15)

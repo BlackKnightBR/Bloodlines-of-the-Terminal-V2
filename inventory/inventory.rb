@@ -48,4 +48,19 @@ class Inventory
   def empty?
     @items.empty?
   end
+
+  def items
+    @items.dup
+  end
+
+  # 🔒 Necessário para serializar inventário no sistema de save
+  def serialize_items
+    @items.map do |item, (quantity, _)|
+      {
+        name: item.name,
+        type: item.class.to_s,
+        quantity: quantity
+      }
+    end
+  end
 end

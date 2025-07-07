@@ -1,11 +1,12 @@
 class Dungeon
   attr_reader :rooms, :player, :inventory
 
-  def initialize(player:, inventory:)
+  def initialize(player:, inventory:, save:)
     @player = player
     @inventory = inventory
     @rooms = generate_rooms
     @small_vial = Potion.new('Small Vial', 15)
+    @save = save
   end
 
   def generate_rooms
@@ -35,6 +36,7 @@ class Dungeon
     end
 
     puts "\nThe dungeon fades into silence..."
+    #@save.save(player: @player, iventory: @inventory)
   end
 
   def choose_next_room(room)
