@@ -34,14 +34,15 @@ class Game
     print '> '
     choice = gets.chomp.downcase
 
-    if choice == 'y' && File.exist?("save.yaml")
-      data = Save.load
-      if data
-        @player = data[:player]
-        @inventory = data[:inventory]
+    if choice == 'y' && File.exist?("player.save") && File.exist?("inventory.save")
+      begin
+        @player = @save.load_player
+        @inventory = @save.load_inventory
         puts "💾 Welcome back, #{@player.name}..."
-      else
+        sleep(0.3)
+      rescue => e
         puts "⚠️ Save file is corrupted or unreadable. A new story begins..."
+        puts "🛠️ Error: #{e.message}"
       end
     else
       puts "✨ A new story begins..."

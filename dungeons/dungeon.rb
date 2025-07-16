@@ -36,7 +36,7 @@ class Dungeon
     end
 
     puts "\nThe dungeon fades into silence..."
-    #@save.save(player: @player, iventory: @inventory)
+    @save.save_object()
   end
 
   def choose_next_room(room)
