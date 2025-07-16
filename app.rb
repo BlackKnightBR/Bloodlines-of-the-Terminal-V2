@@ -36,8 +36,8 @@ class Game
 
     if choice == 'y' && File.exist?("player.save") && File.exist?("inventory.save")
       begin
-        @player = @save.load_player
-        @inventory = @save.load_inventory
+        @player = Save.load_player
+        @inventory = Save.load_inventory
         puts "💾 Welcome back, #{@player.name}..."
         sleep(0.3)
       rescue => e

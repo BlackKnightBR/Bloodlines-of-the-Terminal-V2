@@ -16,7 +16,7 @@ class Save
     puts "🧪 Game state saved to #{filename1} and #{filename2}"
   end
 
-  def load_player(filename = "player.save")
+  def self.load_player(filename = "player.save")
     return nil unless File.exist?(filename)
 
     File.open(filename, 'rb') do |file|
@@ -26,7 +26,7 @@ class Save
     end
   end
 
-  def load_inventory(filename = "inventory.save")
+  def self.load_inventory(filename = "inventory.save")
     return nil unless File.exist?(filename)
 
     File.open(filename, 'rb') do |file|

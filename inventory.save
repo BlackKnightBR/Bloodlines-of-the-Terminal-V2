@@ -1,0 +1,17 @@
+o:Inventory:@items{o:
+Knife:
+@nameI"Rusty Knife:ET:@damagei[i:
+enemyo:Potion;I"Small Vial;	T:@effect_valuei[i
+:playero:
+Booze;I"Whisky;	T;
+i[i;o;;I"Rusty Knife;	T;
+i[i;o;;I"Distilled Madness;	T;
+i[i;o:
+Staff;I"Worn Staff;	T:@valuei[i;o:Shield;I"Wooden Shield;	T;i
+:@attacki[i;o:
+Armor;I"	Robe;	T;i[i;o;;I"Small Vial;	T;i[i;o;;I"
+Boots;	T;i
+[i;o;;I"Whisky;	T;
+i[i;o;;I"Rusty Knife;	T;
+i[i;o:Scroll;I"Scroll of Cinders;	T;i[i;o;;I"Small Hat;	T;i[i;o;;I"Distilled Madness;	T;
+i[i;o;;I"Shaman Staff;	T;i[i;
