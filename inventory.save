@@ -1,4 +1,4 @@
-o:Inventory:@items{o:
+o:Inventory:@items{'o:
 Knife:
 @nameI"Rusty Knife:ET:@damagei[i:
 enemyo:Potion;I"Small Vial;	T:@effect_valuei[i
@@ -14,4 +14,16 @@ Boots;	T;i
 [i;o;;I"Whisky;	T;
 i[i;o;;I"Rusty Knife;	T;
 i[i;o:Scroll;I"Scroll of Cinders;	T;i[i;o;;I"Small Hat;	T;i[i;o;;I"Distilled Madness;	T;
+i[i;o;;I"Shaman Staff;	T;i[i;o;;I"Worn Staff;	T;i[i;o;;I"Wooden Shield;	T;i
+;i[i;o;;I"	Robe;	T;i[i;o;;I"Small Vial;	T;i[i;o;;I"
+Boots;	T;i
+[i;o;;I"Whisky;	T;
+i[i;o;;I"Rusty Knife;	T;
+i[i;o;;I"Scroll of Cinders;	T;i[i;o;;I"Distilled Madness;	T;
+i[i;o;;I"Whisky;	T;
+i[i;o;;I"Rusty Knife;	T;
+i[i;o;;I"Distilled Madness;	T;
+i[i;o;;I"Whisky;	T;
+i[i;o;;I"Rusty Knife;	T;
+i[i;o;;I"Small Hat;	T;i[i;o;;I"Small Vial;	T;i[i;o;;I"Distilled Madness;	T;
 i[i;o;;I"Shaman Staff;	T;i[i;

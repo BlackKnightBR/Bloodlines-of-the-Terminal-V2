@@ -19,18 +19,25 @@ class Dungeon
 
   def run
     current_room_id = '1A'
+    events = ['TrapEvent', 'TreasureEvent', 'LoreEvent']
+    event = Event.new(player: @player, inventory: @inventory)
 
     while current_room_id != 'END' && @player.alive?
       room = @rooms.find { |r| r[:id] == current_room_id }
       break unless room
 
       puts "\n🕯️ Room #{room[:id]}: #{room[:enemy]} awaits..."
+      
 
       enemy = spawn_enemy(room[:enemy])
       combat = Combat.new(player: @player, enemy: enemy, inventory: @inventory)
       combat.run
 
       give_loot(room) if room[:loot] && @player.alive?
+
+      if(rand(1..2) == 1) 
+        event.call_event(events.sample)
+      end  
 
       current_room_id = choose_next_room(room)
     end
