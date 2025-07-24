@@ -23,6 +23,8 @@ class EnemyFactory
       GoblinShaman.new
     when 'Goblin King'
       GoblinKing.new
+    when 'Death'
+      DeathBoss.new
     else
       raise "Unknown enemy: #{enemy_id}"
     end
