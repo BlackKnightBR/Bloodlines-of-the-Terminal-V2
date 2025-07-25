@@ -1,8 +1,0 @@
-o:Inventory:@items{o:
-Booze:
-@nameI"Whisky:ET:@damagei[i:
-enemyo:	Acid;I"Small Acid Vial;	T;
-i[i;o:
-Knife;I"Rusty Knife;	T;
-i[i;o;;I"Distilled Madness;	T;
-i[i;o:Weapon;I"Cursed Blade;	T:@valuei[i:playero:Potion;I"Big Vial;	T:@effect_valuei[i;

@@ -32,18 +32,27 @@ class Dungeon
       enemy = spawn_enemy(room[:enemy])
       combat = Combat.new(player: @player, enemy: enemy, inventory: @inventory)
       combat.run
-
-      give_loot(room) if room[:loot] && @player.alive?
-
-      if(rand(1..2) == 1) 
-        event.call_event(events.sample)
-      end  
-
-      current_room_id = choose_next_room(room)
+      
+      current_room_id = handle_room_aftermath(room, event, events) if @player.alive?
+      
     end
 
     puts "\nThe dungeon fades into silence..."
-    @save.save_object()
+
+    unless @player.alive?
+      puts "💀 Your story ends here... the save is lost to the void."
+      File.delete("player.save") if File.exist?("player.save")
+      File.delete("inventory.save") if File.exist?("inventory.save")
+    else
+      @save.save_object()
+    end
+
+  end
+
+  def handle_room_aftermath(room, event, events)
+    give_loot(room) if room[:loot]
+    event.call_event(events.sample) if rand(1..2) == 1
+    choose_next_room(room)
   end
 
   def choose_next_room(room)

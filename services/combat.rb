@@ -67,7 +67,7 @@ class Combat
           puts "Invalid input! Only numbers are accepted."
         end
       else
-        puts "Invalid move! You hesitate #{player.name}, and time slips away..."
+        puts "Invalid move! You hesitate #{@player.name}, and time slips away..."
       end
 
       if @enemy.alive?
